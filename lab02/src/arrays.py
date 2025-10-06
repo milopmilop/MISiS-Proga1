@@ -22,9 +22,9 @@ print(unique_sorted(nums=[1.0, 1, 2.5, 2.5, 0]))
 
 def flatten(mat: list[list | tuple]) -> list:
     a=[]
-    for b in mat:
-        if isinstance(b, list) or isinstance(b, tuple):
-            a.extend(b)
+    for row in mat:
+        if isinstance(row, list) or isinstance(row, tuple):
+            a.extend(row)
         else:
             raise TypeError('строка не может относится к матрице')
     return a
