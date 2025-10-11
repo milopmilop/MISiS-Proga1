@@ -1,45 +1,45 @@
-# def normalize(text, casefold, yo2e):
-#     text = text.replace("\t"," ")
-#     text = text.replace("\r"," ")
-#     text = text.replace("\n"," ")
-#     # text = text.replace("  "," ")
-#     text = ' '.join(text.split())
+def normalize(text, casefold, yo2e):
+    text = text.replace("\t"," ")
+    text = text.replace("\r"," ")
+    text = text.replace("\n"," ")
+    # text = text.replace("  "," ")
+    text = ' '.join(text.split())
     
-#     if yo2e:
-#         text = text.replace("ё","е")
-#         text = text.replace("Ё","Е")
-#     if casefold:
-#         text = text.casefold()
+    if yo2e:
+        text = text.replace("ё","е")
+        text = text.replace("Ё","Е")
+    if casefold:
+        text = text.casefold()
     
-#     return print(text)
+    return print(text)
 
-# print(normalize('ПрИвЕт\nМИр\t',True,True))
-# print(normalize('ёжик, Ёлка',True,True))
-# print(normalize('Hello\r\nWorld',True,True))
-# print(normalize('двойные   пробелы',True,True))
+print(normalize('ПрИвЕт\nМИр\t',True,True))
+print(normalize('ёжик, Ёлка',True,True))
+print(normalize('Hello\r\nWorld',True,True))
+print(normalize('двойные   пробелы',True,True))
 
 
 
-# def tokenize(text):
-#     text = text.replace(',',' ')
-#     text = text.replace('.',' ')
-#     text = text.replace('!',' ')
-#     text = text.replace('?',' ')
-#     text = text.replace('—',' ')
-#     splittxt = text.split()
-#     a=[]
-#     for i in splittxt:
-#         if i[0].isdigit()==0 and i[0].isalpha() == 0 and i[0].isalnum()==0:
-#             continue
-#         else:
-#             a.append(i)
-#     return a
+def tokenize(text):
+    text = text.replace(',',' ')
+    text = text.replace('.',' ')
+    text = text.replace('!',' ')
+    text = text.replace('?',' ')
+    text = text.replace('—',' ')
+    splittxt = text.split()
+    a=[]
+    for i in splittxt:
+        if i[0].isdigit()==0 and i[0].isalpha() == 0 and i[0].isalnum()==0:
+            continue
+        else:
+            a.append(i)
+    return a
 
-# print(tokenize("привет мир"))
-# print(tokenize("hello,world!!!"))
-# print(tokenize("по-настоящему круто"))
-# print(tokenize("2025 год"))
-# print(tokenize("emoji 😀 не слово"))
+print(tokenize("привет мир"))
+print(tokenize("hello,world!!!"))
+print(tokenize("по-настоящему круто"))
+print(tokenize("2025 год"))
+print(tokenize("emoji 😀 не слово"))
 
 def count_freq(alp):
     words=[]
