@@ -5,7 +5,6 @@ normalize
 
 ![alt text](image.png)
 
-
 tokenize
 
 ![alt text](<../images/image copy.png>)
