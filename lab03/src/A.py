@@ -55,7 +55,6 @@ def count_freq(alp):
     
     for i in range(len(words)):
         answer.update({words[i] : wordcount[i]})
-        print(i)
     return answer
 
 # print(count_freq(["a","b","a","c","b","a"]))
