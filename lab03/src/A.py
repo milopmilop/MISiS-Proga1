@@ -11,12 +11,12 @@ def normalize(text, casefold, yo2e):
     if casefold:
         text = text.casefold()
     
-    return print(text)
+    return text
 
-print(normalize('ПрИвЕт\nМИр\t',True,True))
-print(normalize('ёжик, Ёлка',True,True))
-print(normalize('Hello\r\nWorld',True,True))
-print(normalize('двойные   пробелы',True,True))
+# print(normalize('ПрИвЕт\nМИр\t',True,True))
+# print(normalize('ёжик, Ёлка',True,True))
+# print(normalize('Hello\r\nWorld',True,True))
+# print(normalize('двойные   пробелы',True,True))
 
 
 
@@ -35,11 +35,11 @@ def tokenize(text):
             a.append(i)
     return a
 
-print(tokenize("привет мир"))
-print(tokenize("hello,world!!!"))
-print(tokenize("по-настоящему круто"))
-print(tokenize("2025 год"))
-print(tokenize("emoji 😀 не слово"))
+# print(tokenize("привет мир"))
+# print(tokenize("hello,world!!!"))
+# print(tokenize("по-настоящему круто"))
+# print(tokenize("2025 год"))
+# print(tokenize("emoji 😀 не слово"))
 
 def count_freq(alp):
     words=[]
@@ -55,15 +55,16 @@ def count_freq(alp):
     
     for i in range(len(words)):
         answer.update({words[i] : wordcount[i]})
+        print(i)
     return answer
 
-print(count_freq(["a","b","a","c","b","a"]))
-print(count_freq(["bb","aa","bb","aa","cc"]))
+# print(count_freq(["a","b","a","c","b","a"]))
+# print(count_freq(["bb","aa","bb","aa","cc"]))
 
 def top_n(dict):
     sortedByAlpha = sorted(dict.items(), key=lambda x: x[0])
     sortedByCount = sorted(sortedByAlpha, key=lambda x: x[1], reverse=True)
     return sortedByCount
 
-print(top_n(count_freq(["a","b","a","c","b","a"])))
-print(top_n(count_freq(["bb","aa","bb","aa","cc"])))
+# print(top_n(count_freq(["a","b","a","c","b","a"])))
+# print(top_n(count_freq(["bb","aa","bb","aa","cc"])))
